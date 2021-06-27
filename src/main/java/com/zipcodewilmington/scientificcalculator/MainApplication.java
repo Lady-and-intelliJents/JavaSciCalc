@@ -12,6 +12,8 @@ public class MainApplication {
 
 //        Console.println("Welcome to my calculator!");
         // Display.switchDisplayMode();
+
+
         String s = Console.getStringInput("\nEnter a string...");
         Integer i = Console.getIntegerInput("Enter an integer");
         Double d = Console.getDoubleInput("Enter a double.");

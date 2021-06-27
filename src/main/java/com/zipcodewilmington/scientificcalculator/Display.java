@@ -2,9 +2,10 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class Display {
 
-    Double memory = 0.0 ;
+    public static Double memory = 0.0;
     String displayValue;
     String displayMode;
+
 
     public static void switchDisplayMode() {
         //Switch between binary, octal, decimal, hexadecimal

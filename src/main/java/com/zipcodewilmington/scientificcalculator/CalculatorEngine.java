@@ -3,12 +3,10 @@ package com.zipcodewilmington.scientificcalculator;
 public class CalculatorEngine {
 
     public static Double add(Double input1, Double input2) {
-
         return input1 + input2;
     }
 
     public static Double subtract(Double input1, Double input2) {
-
         return input1 - input2;
     }
 

@@ -7,20 +7,20 @@ import java.awt.*;
  */
 public class MainApplication {
     public static void main(String[] args) {
-//        Display display = new Display();
-        Display.welcomeDisplay();
 
-//        Console.println("Welcome to my calculator!");
-        // Display.switchDisplayMode();
-        String s = Console.getStringInput("\nEnter a string...");
-        Integer i = Console.getIntegerInput("Enter an integer");
-        Double d = Console.getDoubleInput("Enter a double.");
+        Calculator calculator = new Calculator();
 
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a d", d);
+        Console.println("Welcome to my calculator!");
+        Console.println("Options: + , - , * , /, exp, sqr, sqrt, 1/x, " +
+                "SwitchSign, sin, cos, tan, sin^-1, cos^-1, tan^-1, " +
+                "x!, log10, ln, log10^-1, ln^-1");
 
-        Integer x = Console.getIntegerInput("Gimme a numba");
+        Double a = Console.getDoubleInput("Enter a number.");
+        String operation = Console.getStringInput("Enter an operation");
+        Double b = Console.getDoubleInput("Enter a second double.");
+
+        Console.println("The answer is " + calculator.display.memory);
+
 
 
     }

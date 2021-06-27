@@ -17,8 +17,7 @@ public class MainApplication {
 
      //   Double b = Console.getDoubleInput("Enter a second double.");
 
-       // Console.println("The answer is " + calculator.display.memory);
-
+       // Console.println("The answer is " + calculator.display.memory)
 
 
     }

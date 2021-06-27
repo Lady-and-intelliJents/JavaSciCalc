@@ -8,7 +8,17 @@ import java.awt.*;
 public class MainApplication {
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         Calculator calculator = new Calculator();
+=======
+//        Console.println("Welcome to my calculator!");
+        // Display.switchDisplayMode();
+
+
+        String s = Console.getStringInput("\nEnter a string...");
+        Integer i = Console.getIntegerInput("Enter an integer");
+        Double d = Console.getDoubleInput("Enter a double.");
+>>>>>>> e1f4f6fa30527d424e22c2fa7ed5dcf6f75a1eda
 
         Console.println("Welcome to my calculator!");
         Calculator.BasicOrScientific();

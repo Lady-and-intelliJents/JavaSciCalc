@@ -3,6 +3,8 @@ package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
 
 public class Display {
+    public String memory;
+
     static String displayWelcome = "Welcome to my calculator!";
     static String displayMode = "| DECIMAL | octal | binary | hexadecimal |\nType a display mode option to change view...\n";
     static double displayValue = 0.0;

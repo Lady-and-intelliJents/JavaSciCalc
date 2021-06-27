@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestClass {
+
     // test class
   @Test
 
@@ -20,7 +21,8 @@ public class TestClass {
       double actualValue = calculator.add(4, 4);
 
       //then
-    Assert.assertEquals(inputResult, actualValue);
+
+    Assert.assertEquals(inputResult, actualValue, 001);
 
     }
 
@@ -38,9 +40,9 @@ public class TestClass {
 
     // when
     double actualValue = calculator.subtract(4, 4);
-//then
-    Assert.assertEquals(inputResult, actualValue);
 
+    //then
+    Assert.assertEquals(inputResult, actualValue, 001);
 
   }
 
@@ -57,6 +59,10 @@ public class TestClass {
 
     // when
     double actualValue = calculator.multiply(4, 4);
+
+    //then
+    Assert.assertEquals(inputResult, actualValue, 001);
+
   }
 
 
@@ -75,6 +81,9 @@ public class TestClass {
     // when
     double actualValue = calculator.divide(4, 4);
 
+    //then
+    Assert.assertEquals(inputResult, actualValue, 001);
+
   }
 
 
@@ -90,6 +99,9 @@ public class TestClass {
 
     // when
     double actualValue = calculator.square(4);
+
+    // then
+    Assert.assertEquals(inputResult, actualValue, 001);
   }
 
 
@@ -105,6 +117,10 @@ public class TestClass {
 
     // when
     double actualValue = calculator.squareRoot(4);
+
+    // then
+    Assert.assertEquals(inputResult, actualValue, 001);
+
 
 
   }

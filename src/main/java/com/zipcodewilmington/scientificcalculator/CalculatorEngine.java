@@ -13,6 +13,7 @@ public class CalculatorEngine {
     }
 
     public static Double divide(Double input1, Double input2) {
+
         return input1 / input2;
     }
 
@@ -52,6 +53,7 @@ public class CalculatorEngine {
     }
 
     public static Double cosine(Double input1) {
+
         return Math.cos(input1);
     }
 
@@ -81,10 +83,12 @@ public class CalculatorEngine {
     }
 
     public static Double logarithm(Double input1) {
+
         return Math.log10(input1);
     }
 
     public static Double naturalLogarithm (Double input1) {
+
         return Math.log(input1);
     }
 

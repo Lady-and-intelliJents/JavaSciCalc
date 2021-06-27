@@ -30,7 +30,8 @@ public class CalculatorEngine {
         return null;
     }
 
-    public static Double inverse(Double input1, Double input2) {
+    public static Double inverse(Double input1) {
+
         return null;
     }
 

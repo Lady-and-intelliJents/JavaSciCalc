@@ -19,13 +19,9 @@ public class MainApplication {
         String operation = Console.getStringInput("Enter an operation");
         Double b = Console.getDoubleInput("Enter a second double.");
 
-        Console.println("The answer is " + calculator.display.memory);
+        Console.println("The answer is " + calculator.display);
+        
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 07aadce0ecbdedfaedd95515774f5f9f50776a06
 
     }
 }

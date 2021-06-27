@@ -37,8 +37,8 @@ public class CalculatorEngine {
     }
 
     public static Double inverse(Double input1) {
-
         return 1/input1;
+
     }
 
     public static Double switchSign(Double input1, Double input2) {

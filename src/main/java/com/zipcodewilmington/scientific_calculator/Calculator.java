@@ -33,10 +33,10 @@ public class Calculator {
       return inputResult;
   }
 
-  public int squareRoot ( int input1, 4) {
+  public int squareRoot ( int input1) {
 
       Double inputResult = Math.sqrt(input1);
-
+      return input1;
 
 
   }

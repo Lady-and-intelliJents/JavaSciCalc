@@ -1,62 +1,106 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Display {
     public String memory;
 
-    static String displayWelcome = "Welcome to my calculator!";
-    static String displayMode = "| DECIMAL | octal | binary | hexadecimal |\nType a display mode option to change view...\n";
-    static double displayValue = 0.0;
+    static String displayWelcome = "Calculator 7.1";
+    static String displayMode = "Decimal";
+    static Double displayValue = 0.0;
+    static Double storedValue = 0.0;
+    static Boolean shutdown = false;
 
     public static void welcomeDisplay() {
-        System.out.println(displayWelcome);
-        System.out.println(displayMode);
-        System.out.println(displayValue);
+        shutdown = true;
+        do {
+            System.out.println(displayWelcome);
+            System.out.println("Display Mode: " + displayMode);
+            System.out.println("\n================ Tool Bar ================");
+            System.out.println("| DECIMAL | OCTAL | BINARY | HEXADECIMAL |");
+            System.out.println("------------------------------------------");
+            System.out.println("|      M      |     MC     |     MRC     |");
+            System.out.println("==========================================\n");
+            System.out.println(displayValue + "\n");
+
+            changeInputFunction();
+            displayValue = Console.getDoubleInput("");
+        } while (shutdown);
     }
 
-    public static void switchDisplayMode(String prompt) {
+    public static void changeInputFunction() {
+        String operation = Console.getStringInput("To change tool mode, enter {display | memory | shutdown}");
+        String input = operation.toLowerCase();
+
+        switch (input) {
+            case "display":
+                switchDisplayMode();
+                break;
+            case "memory":
+                memoryFunctions();
+                break;
+            case "shutdown":
+                shutdown = false;
+                break;
+            default:
+                displayValue = Calculator.BasicOrScientific(displayValue);
+//                System.out.println("Error change input function. Please try again!");
+                welcomeDisplay();
+        }
+    }
+
+
+    public static void switchDisplayMode() {
         //Switch between binary, octal, decimal, hexadecimal
-
-        Scanner scanner = new Scanner(System.in);
-
-        switch (prompt) {
+        String operation = Console.getStringInput("Enter display mode...");
+        String input = operation.toLowerCase();
+        switch (input) {
             case "decimal":
-                displayMode = "| DECIMAL | octal | binary | hexadecimal |";
+                displayMode = "Decimal";
+                welcomeDisplay();
                 break;
             case "octal":
-                displayMode = "| decimal | OCTAL | binary | hexadecimal |";
+                displayMode = "Octal";
+                welcomeDisplay();
                 break;
             case "binary":
-                displayMode = "| decimal | octal | BINARY | hexadecimal |";
+                displayMode = "Binary";
+                welcomeDisplay();
                 break;
             case "hexadecimal":
-                displayMode = "| decimal | octal | binary | HEXADECIMAL |";
+                displayMode = "Hexadecimal";
+                welcomeDisplay();
                 break;
             default:
                 System.out.println("Error picking display mode. Try again!");
-                break;
-            }
-            Console.println(prompt);
-            welcomeDisplay();
+                welcomeDisplay();
         }
-
-
-
-    public static void chooseDisplayMode(String input) {
-        //Take an input and switch display
     }
 
-    public static void mPlus(Double input) {
+
+    public static void memoryFunctions() {
         //Store current value to memory and update display
-    }
-
-    public static void MC() {
-        //Reset memory to 0.
-    }
-
-    public static void MRC() {
-        //Recall the current value from memory to the display
+        String operation = Console.getStringInput("");
+        String input = operation.toLowerCase();
+        switch (input) {
+            case "m+":
+                storedValue = displayValue;
+                welcomeDisplay();
+                break;
+            case "mc":
+                // Resets Memory
+                displayValue = 0.0;
+                welcomeDisplay();
+                break;
+            case "mrc":
+                displayValue = storedValue;
+                welcomeDisplay();
+                break;
+            default:
+                System.out.println("Error picking display mode. Try again!");
+                welcomeDisplay();
+        }
     }
 
 }

@@ -305,10 +305,11 @@ public void  inverseTangent() {
     public void switchSign(){
         CalculatorEngine calculator = new CalculatorEngine();
         double input1 = 5 ;
+        double input2 = 2;
         double  inputResult = 0.69897000433;
 
         //when
-        double actualValue = calculator.switchSign(input1, i);
+        double actualValue = calculator.switchSign(input1,input2);
 
         //then
         Assert.assertEquals(inputResult, actualValue, .001);

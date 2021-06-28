@@ -1,20 +1,18 @@
 package com.zipcodewilmington.scientificcalculator;
 
-import java.util.Locale;
-import java.util.Scanner;
-
 public class Display {
-    String memory;
 
     static String displayWelcome = "Calculator 7.1";
-    static String displayMode = "Decimal";
-    static Double displayValue = 0.0;
-    static Double storedValue = 0.0;
+    String displayMode = "Decimal";
+    Double displayValue = 0.0;
+    Double storedValue = 0.0;
     static Boolean shutdown = false;
 
-    public static void welcomeDisplay() {
-        shutdown = true;
-        do {
+    public Display() {
+    }
+
+    public void welcomeDisplay() {
+
             System.out.println(displayWelcome);
             System.out.println("Display Mode: " + displayMode);
             System.out.println("\n================ Tool Bar ================");
@@ -24,12 +22,11 @@ public class Display {
             System.out.println("==========================================\n");
             System.out.println(displayValue + "\n");
 
-            changeInputFunction();
-            displayValue = Console.getDoubleInput("");
-        } while (shutdown);
+//            changeInputFunction();
+
     }
 
-    public static void changeInputFunction() {
+    public void changeInputFunction() {
         String operation = Console.getStringInput("To change tool mode, enter {display | memory | shutdown}");
         String input = operation.toLowerCase();
 
@@ -43,43 +40,39 @@ public class Display {
             case "shutdown":
                 shutdown = false;
                 break;
-            default:
-                displayValue = Calculator.BasicOrScientific(displayValue);
-//                System.out.println("Error change input function. Please try again!");
-                welcomeDisplay();
         }
     }
 
 
-    public static void switchDisplayMode() {
+    public void switchDisplayMode() {
         //Switch between binary, octal, decimal, hexadecimal
         String operation = Console.getStringInput("Enter display mode...");
         String input = operation.toLowerCase();
         switch (input) {
             case "decimal":
                 displayMode = "Decimal";
-                welcomeDisplay();
+//                welcomeDisplay();
                 break;
             case "octal":
                 displayMode = "Octal";
-                welcomeDisplay();
+//                welcomeDisplay();
                 break;
             case "binary":
                 displayMode = "Binary";
-                welcomeDisplay();
+//                welcomeDisplay();
                 break;
             case "hexadecimal":
                 displayMode = "Hexadecimal";
-                welcomeDisplay();
+//                welcomeDisplay();
                 break;
             default:
                 System.out.println("Error picking display mode. Try again!");
-                welcomeDisplay();
+//                welcomeDisplay();
         }
     }
 
 
-    public static void memoryFunctions() {
+    public void memoryFunctions() {
         //Store current value to memory and update display
         String operation = Console.getStringInput("");
         String input = operation.toLowerCase();
@@ -103,11 +96,11 @@ public class Display {
         }
     }
 
-  //  public static void setMemory(Double sum) {
- //       this.memory = sum;
-  //  }
+    public void setMemory(Double sum) {
+        this.displayValue = sum;
+    }
 
- //   public static String returnDisplay() {
- //       return this.memory;
-  //  }
+    public Double returnDisplay() {
+        return this.displayValue;
+    }
 }

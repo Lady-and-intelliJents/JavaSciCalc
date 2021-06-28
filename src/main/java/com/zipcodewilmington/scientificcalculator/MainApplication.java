@@ -7,15 +7,11 @@ import java.awt.*;
  */
 public class MainApplication {
     public static void main(String[] args) {
-
-
-        Calculator calculator = new Calculator();
-
         Console.println("Welcome to my calculator!");
-        Calculator.BasicOrScientific();
-        Console.println(Display.returnDisplay());
-
-        Display.welcomeDisplay();
+        Calculator calculator = new Calculator();
+        calculator.display.welcomeDisplay();
+        calculator.BasicOrScientific();
+        Console.println("The answer is " + calculator.display.returnDisplay().toString());
 
     }
 }

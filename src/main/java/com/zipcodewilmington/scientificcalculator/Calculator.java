@@ -1,28 +1,33 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.util.Locale;
+
 public class Calculator {
     CalculatorEngine calculator = new CalculatorEngine();
     Display display = new Display();
-    
+
     public Calculator() {
-        
     }
 
-
     public void BasicOrScientific() {
-        String operation = Console.getStringInput("Choose Basic or Scientific");
-        String input = operation.toLowerCase();
-
-        switch (input) {
-            case "basic":
-                getBasicCalculator();
-                break;
-            case "scientific":
-                getScientificCalculator();
-                break;
-            default:
-                System.out.println("Error, Try again");
+        int x = 0;
+        while (x == 0) {
+            String operation = Console.getStringInput("Choose Basic or Scientific");
+            String input = operation.toLowerCase();
+            switch (input) {
+                case "basic":
+                    getBasicCalculator();
+                    x = 1;
+                    break;
+                case "scientific":
+                    getScientificCalculator();
+                    x = 1;
+                    break;
+                default:
+                    System.out.println("Error, Try again");
+            }
         }
+        Console.println("The answer is " + display.returnDisplay().toString());
     }
 
     private void getScientificCalculator() {
@@ -101,7 +106,7 @@ public class Calculator {
         }
     }
 
-    private void getBasicCalculator(){
+    private void getBasicCalculator() {
         Double inputA = Console.getDoubleInput("Enter number");
         String operation = Console.getStringInput("Choose an operation: + , - , * , /");
         Double inputB;
@@ -128,6 +133,50 @@ public class Calculator {
                 display.setMemory(sum);
                 break;
         }
+    }
+
+    public void whatsNext() {
+        int x = 0;
+        while (x == 0) {
+            String nextAction = Console.getStringInput("Choose: New calculation or change display or quit");
+            String input = nextAction.toLowerCase();
+            switch (input) {
+                case "new calculation":
+                    BasicOrScientific();
+                    x = 1;
+                    break;
+                case "change display":
+                    display.switchDisplayMode();
+                    x = 1;
+                    break;
+                case "quit":
+                    Console.println("Goodbye");
+                    System.exit(0);
+                default:
+                    System.out.println("Error, Try again");
+            }
+        }
+    }
+
+    public void calculatorOrDisplay() {
+        int x = 0;
+        while (x == 0) {
+        String cOrD = Console.getStringInput("Open calculator or display options");
+        String input = cOrD.toLowerCase();
+
+        switch(input) {
+            case"calculator":
+                BasicOrScientific();
+                x = 1;
+                break;
+            case "display options":
+                display.switchDisplayMode();
+                x = 1;
+                break;
+            default:
+                System.out.println("Error, Try again");
+        }
+    }
     }
 }
 

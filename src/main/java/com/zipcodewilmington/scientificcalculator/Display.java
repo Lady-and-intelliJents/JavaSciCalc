@@ -46,29 +46,25 @@ public class Display {
 
     public void switchDisplayMode() {
         //Switch between binary, octal, decimal, hexadecimal
-        String operation = Console.getStringInput("Enter display mode...");
+        String operation = Console.getStringInput("Choose: decimal, octal, binary or hexadecimal.");
         String input = operation.toLowerCase();
         switch (input) {
             case "decimal":
                 displayMode = "Decimal";
-//                welcomeDisplay();
                 break;
             case "octal":
                 displayMode = "Octal";
-//                welcomeDisplay();
                 break;
             case "binary":
                 displayMode = "Binary";
-//                welcomeDisplay();
                 break;
             case "hexadecimal":
                 displayMode = "Hexadecimal";
-//                welcomeDisplay();
                 break;
             default:
                 System.out.println("Error picking display mode. Try again!");
-//                welcomeDisplay();
         }
+        Console.println(this.returnDisplay().toString());
     }
 
 

@@ -10,8 +10,7 @@ public class MainApplication {
         Console.println("Welcome to my calculator!");
         Calculator calculator = new Calculator();
         calculator.display.welcomeDisplay();
-        calculator.BasicOrScientific();
-        Console.println("The answer is " + calculator.display.returnDisplay().toString());
-
+        calculator.calculatorOrDisplay();
+        calculator.whatsNext();
     }
 }

@@ -200,8 +200,8 @@ public class TestCalculatorEngine {
   @Test
   public void inverseLogarithmTest(){
     CalculatorEngine calculator = new CalculatorEngine();
-    double input1 = 2.197224577;
-    double inputResult = 9;
+    double input1 = 1;
+    double inputResult = 10;
 
     //when
     double actualValue = calculator.inverseLogarithm(input1, inputResult);
@@ -216,8 +216,8 @@ public class TestCalculatorEngine {
   public void inverseSineTest() {
     //given
     CalculatorEngine calculator = new CalculatorEngine();
-    double input1 = .8660254838;
-    double  inputResult = 1.8471975512277205;
+    double input1 = 0.75;
+    double  inputResult = 0.848062079;
 
     //when
     double actualValue = calculator.inverseSine(input1);
@@ -304,20 +304,21 @@ public class TestCalculatorEngine {
   public void switchSign(){
     CalculatorEngine calculator = new CalculatorEngine();
     double input1 = 5 ;
-    double inputResult = -5;
+    double input2 = 2;
+    double  inputResult = 0.69897000433;
 
     //when
     double actualValue = calculator.switchSign(input1);
 
     //then
-    Assert.assertEquals(inputResult, actualValue);
+    Assert.assertEquals(inputResult, actualValue, .001);
   }
 
   @Test
   public void inverse(){
     CalculatorEngine calculator = new CalculatorEngine();
-    double input1 = 9 ;
-    double  inputResult = 29;
+    double input1 = 4 ;
+    double  inputResult = 0.25;
 
     //when
     double actualValue = calculator.inverse(input1);

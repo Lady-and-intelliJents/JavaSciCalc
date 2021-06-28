@@ -1,7 +1,5 @@
 package com.zipcodewilmington.scientificcalculator;
 
-import java.util.Locale;
-
 public class Calculator {
     CalculatorEngine calculator = new CalculatorEngine();
     Display display = new Display();

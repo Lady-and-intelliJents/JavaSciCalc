@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Display {
-    public String memory;
+    String memory;
 
     static String displayWelcome = "Calculator 7.1";
     static String displayMode = "Decimal";
@@ -103,4 +103,11 @@ public class Display {
         }
     }
 
+  //  public static void setMemory(Double sum) {
+ //       this.memory = sum;
+  //  }
+
+ //   public static String returnDisplay() {
+ //       return this.memory;
+  //  }
 }

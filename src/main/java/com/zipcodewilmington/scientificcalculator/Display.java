@@ -3,7 +3,7 @@ package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
 
 public class Display {
-    public String memory;
+    String memory;
 
     static String displayWelcome = "Welcome to my calculator!";
     static String displayMode = "| DECIMAL | octal | binary | hexadecimal |\nType a display mode option to change view...\n";
@@ -59,4 +59,11 @@ public class Display {
         //Recall the current value from memory to the display
     }
 
+  //  public static void setMemory(Double sum) {
+ //       this.memory = sum;
+  //  }
+
+ //   public static String returnDisplay() {
+ //       return this.memory;
+  //  }
 }

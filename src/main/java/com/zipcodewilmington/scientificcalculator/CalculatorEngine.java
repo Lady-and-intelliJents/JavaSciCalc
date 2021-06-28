@@ -2,6 +2,9 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class CalculatorEngine {
 
+    public CalculatorEngine() {
+    }
+
     public static Double add(Double input1, Double input2) {
         return input1 + input2;
     }
@@ -40,9 +43,9 @@ public class CalculatorEngine {
 
     }
 
-    public static Double switchSign(Double input1, Double input2) {
+    public static Double switchSign(Double input1) {
 
-        return input1 *= -1;
+        return input1 * -1;
     }
 
     public static Double sine(Double input1) {

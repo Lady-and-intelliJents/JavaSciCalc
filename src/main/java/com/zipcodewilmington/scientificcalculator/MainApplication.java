@@ -12,12 +12,7 @@ public class MainApplication {
 
         Console.println("Welcome to my calculator!");
         Calculator.BasicOrScientific();
-
-       // Double a = Console.getDoubleInput("Enter a number.");
-
-     //   Double b = Console.getDoubleInput("Enter a second double.");
-
-       // Console.println("The answer is " + calculator.display.memory)
+        Console.println(Display.returnDisplay());
 
 
     }

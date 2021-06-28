@@ -79,8 +79,11 @@ public class CalculatorEngine {
     }
 
     public static Double factorial(Double input1) {
-
-        return input1 * factorial(input1 - 1);
+        Double sum = 0.0;
+        for (double i = input1 - 1; i > 0; i--) {
+            sum += input1 * i;
+        }
+        return sum;
     }
 
     public static Double logarithm(Double input1) {

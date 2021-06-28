@@ -44,7 +44,6 @@ public class CalculatorEngine {
     }
 
     public static Double switchSign(Double input1) {
-
         return input1 * -1;
     }
 

@@ -26,12 +26,21 @@ public class Calculator {
         inputResult = input1 / input2;
         return inputResult;
     }
+    
+  public int square ( int input1){
+      int inputResult;
+      inputResult = input1 * input1;
+      return inputResult;
+  }
 
-    public int square(int input1) {
-        int inputResult;
-        inputResult = input1 * input1;
-        return inputResult;
-    }
+  public int squareRoot ( int input1) {
+
+      Double inputResult = Math.sqrt(input1);
+      return input1;
+
+
+  }
+
 
     //public int squareRoot ( int input1, 4) {
 

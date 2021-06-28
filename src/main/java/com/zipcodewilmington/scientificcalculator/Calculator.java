@@ -1,17 +1,29 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class Calculator {
+  
     CalculatorEngine calculator = new CalculatorEngine();
     Display display = new Display();
 
-    public static void BasicOrScientific() {
+
+    public static Double BasicOrScientific(Double displayValue) {
         String operation = Console.getStringInput("Choose Basic or Scientific");
         String input = operation.toLowerCase();
+        Double output = 0.0;
 
-        if (input.equals("basic")) {
-            getBasicCalculator();
-        } else if(input.equals("scientific")) {
-            getScientificCalculator();
+        switch (input) {
+            case "basic":
+                output = getBasicCalculator(displayValue);
+                Display.welcomeDisplay();
+                break;
+            case "scientific":
+                getScientificCalculator(displayValue);
+                Display.welcomeDisplay();
+                break;
+            default:
+                System.out.println("Error, Try again");
+                Display.welcomeDisplay();
+                Display.memoryFunctions();
         }
 
 
@@ -121,5 +133,7 @@ public class Calculator {
                 break;
         }
     }
-
 }
+
+
+

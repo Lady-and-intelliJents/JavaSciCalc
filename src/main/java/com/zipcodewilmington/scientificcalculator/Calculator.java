@@ -13,6 +13,7 @@ public class Calculator {
         String operation = Console.getStringInput("Choose Basic or Scientific");
         String input = operation.toLowerCase();
 
+
         switch (input) {
             case "basic":
                 getBasicCalculator();
@@ -31,6 +32,7 @@ public class Calculator {
                 "SwitchSign, sin, cos, tan, inverseSin, inverseCos, inverseTan, \n" +
                 "x!, log10, Ln, inverseLog, inverseLn");
         Double sum;
+
         switch (input) {
             case "exp":
                 Double inputB = Console.getDoubleInput("Enter exponent");

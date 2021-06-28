@@ -8,26 +8,26 @@ import java.awt.*;
 public class MainApplication {
     public static void main(String[] args) {
 
-<<<<<<< HEAD
+
         Calculator calculator = new Calculator();
-=======
+
+//
+        Display.welcomeDisplay();
+
+
+//        String s = Console.getStringInput("\nEnter a string...");
+//        Integer i = Console.getIntegerInput("Enter an integer");
+//        Double d = Console.getDoubleInput("Enter a double.");
+
+
 //        Console.println("Welcome to my calculator!");
-        // Display.switchDisplayMode();
+//        Calculator.BasicOrScientific();
 
+        // Double a = Console.getDoubleInput("Enter a number.");
 
-        String s = Console.getStringInput("\nEnter a string...");
-        Integer i = Console.getIntegerInput("Enter an integer");
-        Double d = Console.getDoubleInput("Enter a double.");
->>>>>>> e1f4f6fa30527d424e22c2fa7ed5dcf6f75a1eda
+        //   Double b = Console.getDoubleInput("Enter a second double.");
 
-        Console.println("Welcome to my calculator!");
-        Calculator.BasicOrScientific();
-
-       // Double a = Console.getDoubleInput("Enter a number.");
-
-     //   Double b = Console.getDoubleInput("Enter a second double.");
-
-       // Console.println("The answer is " + calculator.display.memory)
+        // Console.println("The answer is " + calculator.display.memory)
 
 
     }
